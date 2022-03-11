@@ -10,10 +10,10 @@ int main()
         a++;
     } while (a < 10);
 
-
     int enteredNumber;
 
-    do {
+    do
+    {
         std::cout << "Enter a number greater than 10: ";
         std::cin >> enteredNumber;
     } while (enteredNumber <= 10);

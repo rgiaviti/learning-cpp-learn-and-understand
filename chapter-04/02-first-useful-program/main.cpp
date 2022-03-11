@@ -1,6 +1,7 @@
 #include <iostream>
 
-int main() {
+int main()
+{
     int n1, n2, n3, n4, n5;
     std::cout << "Enter five integers separated by space: ";
     std::cin >> n1 >> n2 >> n3 >> n4 >> n5;

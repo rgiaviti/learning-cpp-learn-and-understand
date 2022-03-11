@@ -1,6 +1,7 @@
 #include <iostream>
 
-int main() {
+int main()
+{
 
     // Greater Than: ">"
     bool result1 = 2 > 0; // true;
@@ -20,7 +21,7 @@ int main() {
 
     // Another Relational Operators:
     // ">=" Greater Than or Equal To
-    // "<=" Less Than or Equal To  
+    // "<=" Less Than or Equal To
 
     return 0;
 }

@@ -2,10 +2,11 @@
 
 int main()
 {
-    //while (true) // infinite loop
-  
+    // while (true) // infinite loop
+
     int a = 0;
-    while (a < 10) {
+    while (a < 10)
+    {
         std::cout << "a is " << a << std::endl;
         a++;
     }

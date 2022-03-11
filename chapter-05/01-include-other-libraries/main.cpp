@@ -1,5 +1,5 @@
 #include <iostream> //a library
-#include <string> //another library
+#include <string>   //another library
 
 // #include <time.h> // c format extension .h is valid in c++ but not necessary
 // #include <ctime> //c++ format
@@ -12,6 +12,7 @@
 
 #include <stdlib.h>
 
-int main() {
-    printf("Hello World"); //using C function presented in stdlib
+int main()
+{
+    printf("Hello World"); // using C function presented in stdlib
 }

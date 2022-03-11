@@ -1,7 +1,9 @@
 # Variables
 
 ## Types
+
 These are the fundamental data types supported by C++.
+
 ```
 Data            Type Meaning            Size (in Bytes)
 int             Integer	                2 or 4
@@ -14,6 +16,7 @@ void            Empty                   0
 ```
 
 ## Modifiers
+
 ```
 Data Type           Size (in Bytes)     Meaning
 signed  int         4                   used for integers (equivalent to int)
@@ -30,5 +33,6 @@ unsigned char       1                   used for characters (range 0 to 255)
 ```
 
 ## C++ Void
+
 The `void` keyword indicates an absence of data. It means "nothing" or "no value". We will use void when we learn about functions and pointers.
 **Note:** We cannot declare variables of the void type.

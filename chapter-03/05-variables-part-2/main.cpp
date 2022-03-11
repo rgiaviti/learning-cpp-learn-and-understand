@@ -3,8 +3,9 @@
 
 using namespace std;
 
-int main() {
-    int a= 12, b = 47; // declaring and initilizing multiple vars in same line
+int main()
+{
+    int a = 12, b = 47;                   // declaring and initilizing multiple vars in same line
     int year = 2022, month = 2, day = 25; // another example
 
     std::cout << "Today is "
