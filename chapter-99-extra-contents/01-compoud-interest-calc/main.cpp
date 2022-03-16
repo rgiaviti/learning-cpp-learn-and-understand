@@ -1,55 +1,67 @@
 #include <iostream>
 #include <cmath>
 
-float calculate(float, float, float);
-void calculateEveryStep(float, float, float, float);
+void calculateByFormula(float, float, float);
+void calculateStepByStep(float, float, float, float);
 
 int main()
 {
-    calculateEveryStep(100.f, 0.1, 12.f, 10.f);
+    float initialValue = 1000.00f;         // initial value
+    float interestRate = 50.0f;            // in percent: example = 100 for 100%
+    float time = 12.0f;                    // days, months, or years... whatever
+    float recurrencyContribution = 10.00f; // contribution
+    int calculationType = 1;               // 0 = Calculate By Formula, 1 = Calculate Step by Step
+
+    std::cout.precision(2);
+    std::cout << "Initial Value: " << std::fixed << initialValue << std::endl;
+    std::cout << "Interest Rate: " << std::fixed << interestRate << "%" << std::endl;
+    std::cout << "Time: " << std::fixed << time << " (Days, Months or Years)" << std::endl;
+
+    if (calculationType == 0) {
+        calculateByFormula(initialValue, interestRate, time);
+        std::cout << std::endl;
+    }
+
+    if (calculationType == 1) {
+        std::cout << "Contribution: " << std::fixed << recurrencyContribution << std::endl;
+        std::cout << std::endl;
+        calculateStepByStep(initialValue, interestRate, time, recurrencyContribution);
+    }
+
     return 0;
 }
 
-float calculate(float initialValue, float interestRate, float time)
+void calculateByFormula(float initialValue, float interestRate, float time)
 {
-    double finalValue = (initialValue)*pow((1 + (interestRate)), time);
-    return trunc(finalValue * 100);
+    double finalValue = (initialValue * pow((1.0f + (interestRate / 100.00f)), time));
+
+    std::cout << "------------------------------------------------------------" << std::endl;
+    std::cout << "Calculated Value By Formula: " << std::fixed << finalValue << std::endl;
+    std::cout << "------------------------------------------------------------" << std::endl;
+    return;
 }
 
-void calculateEveryStep(float initialValue, float interestRate, float time, float contribution)
+void calculateStepByStep(float initialValue, float interestRate, float time, float recurrencyContribution)
 {
-    float value = initialValue;
-    float totalValue = initialValue;
-    float yield = 0.f;
+    float amount = initialValue;
+    float yield = 0.0f;
+    float rate = interestRate / 100.0F;
 
-    float totalYield = 0.f;
-
-    std::cout << "Initial Value: " << value << std::endl;
-    std::cout << "Rate: " << interestRate * 100 << "%" << std::endl;
-    std::cout << "Time: " << time << std::endl;
-    std::cout << "Contribution: " << contribution << std::endl;
-
-    for (int i = 1; i <= time; i++)
+    for (int i = 1; i <= time; ++i)
     {
+        yield = amount * rate;
+        amount += yield;
+        amount += recurrencyContribution;
+        std::cout << "Iteration " << i << std::endl;
+        std::cout << "Amount = " << std::fixed << amount << std::endl;
+        std::cout << "Yield = " << std::fixed << yield << std::endl;
+        std::cout << "Amount + Rate = " << std::fixed << amount << std::endl;
         std::cout << std::endl;
-        std::cout << "Iteraction " << i << std::endl;
-        std::cout << "-------------" << std::endl;
-
-        value = value + contribution;
-        yield = value * interestRate;
-        totalYield = totalYield + yield;
-        totalValue = totalValue + contribution;
-        value = value + yield;
-
-        std::cout << "Yield: " << yield << std::endl;
-        std::cout << "Value: " << value << std::endl;
     }
 
-    std::cout << std::endl;
-    std::cout << std::endl;
-    std::cout << "Total Value Invested: " << totalValue << std::endl;
-    std::cout << "Total Yield: " << totalYield << std::endl;
-    std::cout << "Final Value: " << value << std::endl;
+    std::cout << "------------------------------------------------------------" << std::endl;
+    std::cout << "Calculated Value Step by Step: " << std::fixed << amount << std::endl;
+    std::cout << "------------------------------------------------------------" << std::endl;
 
     return;
 }
