@@ -1,7 +1,7 @@
 # Arrays - Basics
 
 - Declaration and usage;
-- Memory represenation;
+- Memory representation;
 - Array initialization;
 - Simple array algorithms;
 - C string;
