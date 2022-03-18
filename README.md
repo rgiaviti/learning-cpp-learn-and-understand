@@ -24,3 +24,56 @@ $ ./a.out
 # Course Link
 
 - https://www.udemy.com/course/learn-c-plus-plus-from-beginner-to-advanced
+
+## Course Contents
+### First C++ Program
+
+- The most C++ program;
+- Hello world, printing to monitor;
+- More advanced print formats;
+- Variables in C++ - Part 1;
+- Variables in C++ - Part 2;
+
+### Interaction With User
+
+- Getting data from standard input (keyboard);
+- First "useful" program - calculate sum;
+- Constant variable in C++, macro constants;
+- The auto keyword, new in C++11;
+- Comments;
+
+### More Advanced Examples
+
+- Inclusion of other libraries;
+- If-else statement: conditional execution
+- Logical operators part 1;
+- Logical operators part 2;
+- Relational operators;
+- Comma operator;
+
+### Repeating Code Executions - Loops
+
+- For Loop;
+- While Loop;
+- Do While Loop;
+- For Each Loop - New in C++11;
+- Break Statement;
+- Continue Statement;
+- GoTo;
+- Infinite Loops;
+- Nested Loops;
+
+### Arrays - Basics
+
+- Declaration and usage;
+- Memory representation;
+- Array initialization;
+- Simple array algorithms;
+- C string;
+
+### Functions - Basics
+
+- Concept and Usage;
+- Functions With Return Values;
+- Functions that do not accept anything and do not return anything;
+- Basics lambda functions new in C++11;

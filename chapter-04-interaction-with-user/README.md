@@ -1,4 +1,4 @@
-# Interaction With User
+## Interaction With User
 
 - Getting data from standard input (keyboard);
 - First "useful" program - calculate sum;

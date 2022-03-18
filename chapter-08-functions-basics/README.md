@@ -1,4 +1,4 @@
-# Functions - Basics
+## Functions - Basics
 
 - Concept and Usage;
 - Functions With Return Values;

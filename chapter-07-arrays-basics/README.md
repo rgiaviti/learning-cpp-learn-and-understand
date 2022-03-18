@@ -1,4 +1,4 @@
-# Arrays - Basics
+## Arrays - Basics
 
 - Declaration and usage;
 - Memory representation;
