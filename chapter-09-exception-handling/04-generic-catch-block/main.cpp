@@ -23,7 +23,7 @@ int main()
     {
         trala(n);
     }
-    catch (...)
+    catch (...) // generic catch
     {
         std::cout << "Error" << std::endl;
     }

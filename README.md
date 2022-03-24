@@ -77,3 +77,20 @@ $ ./a.out
 - Functions With Return Values;
 - Functions that do not accept anything and do not return anything;
 - Basics lambda functions new in C++11;
+
+### Exception Handling
+
+- Explanation and Usage - Part 1;
+- Explanation and Usage - Part 2;
+- Standard Exceptions;
+- Generic Catch Block;
+- Nested Try-Catch Blocks;
+- Exception propagation;
+
+## Structures in C++
+- Concept and Usage;
+- Attributes and Structure Initialization;
+- Static Attributes;
+- Arrays of Struct;
+
+## Generic Programming - Basics
