@@ -20,5 +20,11 @@ int main()
     std::cin >> dt.year;
 
     std::cout << dt.day << "/" << dt.month << "/" << dt.year << std::endl;
+
+    // another way to initialize
+    Date dt2;
+    dt2.day = 10;
+    dt2.month = 01;
+    dt2.year = 2022;
     return 0;
 }
