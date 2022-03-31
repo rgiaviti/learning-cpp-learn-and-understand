@@ -5,4 +5,3 @@
 - String;
 - Map;
 - Function;
-- Deque;
