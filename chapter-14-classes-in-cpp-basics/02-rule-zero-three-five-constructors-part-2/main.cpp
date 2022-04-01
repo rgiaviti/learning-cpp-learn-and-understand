@@ -1,36 +1,105 @@
 #include <iostream>
+#include <string>
+#include <stdexcept>
 
-class DummyClass
+class Date
 {
-
-    int dummy_attr1;
-    char dummy_attr2;
-
-public:
-    DummyClass() : dummy_attr1(0), dummy_attr2('E')
+    int day;
+    int month;
+    int year;
+    std::string GetMonthName() const
     {
-        std::cout << "Hello! Constructor Here!" << std::endl;
+        static std::string months[] =
+            {
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"};
+
+        return months[this->month - 1];
     }
 
-    DummyClass(int param) : dummy_attr1(1), dummy_attr2('P')
+public:
+    Date(int day, int month, int year)
     {
-        std::cout << "2nd constructor - " << param << std::endl;
+        this->SetDate(day, month, year);
+    }
+
+    void SetDate(int day, int month, int year)
+    {
+        this->SetDay(day);
+        this->SetMonth(month);
+        this->SetYear(year);
     }
 
     void Print() const
     {
-        std::cout << "dummy_attr1 = " << this->dummy_attr1 << std::endl;
-        std::cout << "dummy_attr2 = " << this->dummy_attr2 << std::endl;
+        std::cout << this->month << "/" << this->day << "/" << this->year << std::endl;
+    }
+
+    void PrintNice() const
+    {
+        std::cout << day << " " << this->GetMonthName() << " " << this->year << std::endl;
+    }
+
+    void SetDay(int day)
+    {
+        if (day < 1 || day > 30)
+        {
+            throw std::logic_error("day out of range");
+        }
+
+        this->day = day;
+    }
+
+    void SetMonth(int month)
+    {
+        if (month < 1 || month > 12)
+        {
+            throw std::logic_error("month out of range");
+        }
+        this->month = month;
+    }
+
+    void SetYear(int year)
+    {
+        if (year < 0)
+        {
+            throw std::logic_error("Year must be positive");
+        }
+        this->year = year;
+    }
+
+    int GetDay() const
+    {
+        return this->day;
+    }
+
+    int GetMonth() const
+    {
+        return this->month;
+    }
+
+    int GetYear() const
+    {
+        return this->year;
     }
 };
 
 int main()
 {
-    DummyClass dummy; // call the constructor
-    dummy.Print();
+    Date dt1(1,1,2014);
+    Date dt2(dt1);
 
-    DummyClass dummy2(7); // call the constructor with parameter
-    dummy2.Print();
-
+    dt1.PrintNice();
+    dt2.PrintNice();
     return 0;
 }
