@@ -5,29 +5,12 @@
 
 class Date
 {
+private:
     int day;
     int month;
     int year;
 
-    std::string GetMonthName() const
-    {
-        static std::string months[] =
-            {
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"};
-
-        return months[this->month - 1];
-    }
+    std::string GetMonthName() const;
 
 public:
     void SetDate(int day, int month, int year);

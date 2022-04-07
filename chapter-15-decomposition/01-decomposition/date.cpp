@@ -1,6 +1,26 @@
 #include "date.h"
 #include <iostream>
+#include <string>
 
+std::string Date::GetMonthName() const
+{
+    std::string months[] =
+        {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"};
+
+    return months[this->month - 1];
+}
 
 void Date::SetDate(int d, int m, int y)
 {
