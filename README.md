@@ -94,3 +94,58 @@ $ ./a.out
 - Arrays of Struct;
 
 ## Generic Programming - Basics
+- Generic Programming - Part 1;
+- Generic Programming - Part 2;
+
+# STL - Standard Types in C++
+- Vector;
+- Deque;
+- String;
+- Map;
+- Function;
+
+# Classes in C++ - Beggining
+- Concept and Usage;
+- Principles of Object Oriented Programming (OOP) - Part 1;
+- Principles of Object Oriented Programming (OOP) - Part 2;
+
+# Classes in C++ - Basics
+- Rule of Zero/three/five and Constructors - Part 1;
+- Rule of Zero/three/five and Constructors - Part 2;
+- Destructors;
+- Friend Functions;
+- Generic Classes;
+
+# Decomposition
+- Decomposition
+
+# Interaction with WinAPI
+- Using OS libraries and functions;
+- WinAPI Types;
+- Checking for Errors;
+
+```
+I did not implemented the lessons of this chapter because I'm using Linux :D
+```
+
+# Files in C++
+- Let's Play With Files;
+
+# Basic Encryption
+- Some fun with basic encryption;
+
+# Pointers and References
+- Introduction to Pointers;
+- Comparison Operators and Pointers;
+- Operators and Pointers - Part 1;
+- Operators and Pointers - Part 2;
+- Pointing to Different Objects - Part 1;
+- Pointing to Different Objects - Part 2;
+- Referencing;
+
+# Extra Contents
+This chapter has some extra contents created by myself like programming exercises. These contents are not in the course.
+
+## Contents
+- 01: Compound Interest Calc;
+- 02: Calculate Prime Numbers;
